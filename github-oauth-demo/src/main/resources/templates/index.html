@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OAuth2 Demo</title>
+</head>
+<body>
+    <a id="login">Login with GitHub</a>
+    <script th:inline="javascript">
+        const client_id = /*[[${clientId}]]*/;
+        const redirect_url = /*[[${redirectUrl}]]*/;
+        document.getElementById('login').href = "https://github.com/login/oauth/authorize?client_id=" + client_id + "&redirect_uri=" + redirect_url;
+    </script>
+</body>
+</html>
